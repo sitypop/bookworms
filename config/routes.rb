@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+
+get 'book_clubs' => 'book_clubs#index'
+
+resources :book_clubs
+
+root to: 'application#angular#index.html'
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
