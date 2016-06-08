@@ -4,7 +4,7 @@ class ApplicationController < ActionController::API
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :null_session
 
-  respond_to :json
+  respond_to :json, :html
 
   def angular
     # render 'layouts/application'

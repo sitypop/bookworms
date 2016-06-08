@@ -4,7 +4,7 @@ class CreateBookClubs < ActiveRecord::Migration
       t.string :name
       t.string :location
       t.string :genre
-      t.date :date
+      t.integer :day
       t.string :description
       t.time :time
       t.string :book
