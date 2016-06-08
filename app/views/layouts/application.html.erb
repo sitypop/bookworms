@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bookworms</title>
+  <title>Bookworm | Your first stop for book clubs</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
+<body ng-app="bookWormApp">
+  <div ng-controller="BookClubController as ctrl" ng-init="ctrl.getBookClubs()" class="book-clubs">
+    <ul>
+      <li ng-repeat="bookclubs in ctrl.bookClubs">
+        <h3 class="book-club-name"> {{ bookclubs.name }} </h3>
+        <ul>
+          <li class="book-club-genre"> {{bookclubs.genre }} </li>
+          <li class="book-club-location"> {{bookclubs.location }} </li>
+          <li class="book-club-day"> {{bookclubs.day }} </li>
+          <li class="book-club-time"> {{bookclubs.time }} </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 </body>
 </html>

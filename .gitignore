@@ -12,6 +12,6 @@
 !/log/.keep
 /tmp
 
-app/assets/javascripts/angular/app/bower_components
+vendor/assets/bower_components
 
-app/assets/javascripts/angular/node_modules
+node_modules

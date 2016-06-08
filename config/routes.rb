@@ -5,8 +5,7 @@ get 'book_clubs' => 'book_clubs#index'
 
 resources :book_clubs
 
-root to: 'application#angular#index.html'
-
+root 'angular#angular'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
