@@ -8,7 +8,7 @@ class ApplicationController < ActionController::API
 
   def angular
     # render 'layouts/application'
-    render file: '../bookworms/app/assets/javascripts/angular/index.html'
+    render file: '../bookworms/app/assets/javascripts/angular/app/index.html'
   end
 
 end
