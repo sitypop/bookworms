@@ -5,8 +5,8 @@ describe("BookClubFactory", function(){
   var bookClub;
 
   beforeEach(inject(function(BookClubFactory){
-    factory = new BookClubFactory("Name", "Genre", "Location", "Date", "Time", "Description", "Book");
-    bookClub = { name: "Name", genre: "Genre", location: "Location", date: "Date", time: "Time", description: "Description", book: "Book" };
+    factory = new BookClubFactory("Name", "Genre", "Location", "Day", "Time", "Description", "Book");
+    bookClub = { name: "Name", genre: "Genre", location: "Location", day: "Day", time: "Time", description: "Description", book: "Book" };
   }));
 
   it("creates a bookClub object with a name", function(){
@@ -21,8 +21,8 @@ describe("BookClubFactory", function(){
     expect(factory.location).toEqual(bookClub.location);
   });
 
-  it("creates a bookClub object with a date", function(){
-    expect(factory.date).toEqual(bookClub.date);
+  it("creates a bookClub object with a day", function(){
+    expect(factory.day).toEqual(bookClub.day);
   });
 
   it("creates a bookClub object with a time", function(){

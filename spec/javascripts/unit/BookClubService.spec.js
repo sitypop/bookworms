@@ -3,20 +3,19 @@ describe("BookClubService", function(){
 
   var BookClubService, BookClubFactory, httpBackend;
 
-  var apiUrl = "http://book-worm-api.herokuapp.com/book-clubs";
+  var apiUrl = "/book_clubs.json";
 
-  var apiResponse = {
-    "response": {
-      "results":[{
-        name: "name",
-        genre: "genre",
-        location: "location",
-        date: "date",
-        time: "time",
-        description: "description",
-        book: "book"
-      }
-    ]}};
+  var apiResponse = [
+    {
+    name: "name",
+    genre: "genre",
+    location: "location",
+    day: "day",
+    time: "time",
+    description: "description",
+    book: "book"
+    }
+  ];
 
   beforeEach(inject(function($httpBackend, _BookClubService_, _BookClubFactory_){
     httpBackend = $httpBackend;
@@ -25,7 +24,7 @@ describe("BookClubService", function(){
   }));
 
   it("receives book club data from the API", function(){
-    var bookClub = new BookClubFactory("name", "genre", "location", "date", "time", "description", "book");
+    var bookClub = new BookClubFactory("name", "genre", "location", "day", "time", "description", "book");
 
     httpBackend.expectGET(apiUrl).respond(apiResponse);
 
