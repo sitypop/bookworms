@@ -34,7 +34,7 @@ describe("homepage", function(){
 
   it("should get home page title", function(){
     browser.get('/');
-    expect(browser.getTitle()).toEqual("Bookworm | Your first stop for book clubs");
+    expect(browser.getTitle()).toEqual("string Bookworm | Your first stop for book clubs");
   });
 
   it("should display a list of bookclub names", function(){
