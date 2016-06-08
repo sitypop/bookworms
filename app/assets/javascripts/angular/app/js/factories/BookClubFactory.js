@@ -1,9 +1,9 @@
 bookWormApp.factory("BookClubFactory", function(){
-  var bookClub = function(name, genre, location, date, time, description, book){
+  var bookClub = function(name, genre, location, day, time, description, book){
     this.name = name;
     this.genre = genre;
     this.location = location;
-    this.date = date;
+    this.day = day;
     this.time = time;
     this.description = description;
     this.book = book;

@@ -14,7 +14,7 @@ bookWormApp.service("BookClubService", [ "$http", "BookClubFactory", function($h
 
   function _createBookClub(response){
     return response.data.map(function(bookClub){
-      return new BookClubFactory(bookClub.name, bookClub.genre, bookClub.location, bookClub.date, bookClub.time, bookClub.description, bookClub.book);
+      return new BookClubFactory(bookClub.name, bookClub.genre, bookClub.location, bookClub.day, bookClub.time, bookClub.description, bookClub.book);
     });
   }
 

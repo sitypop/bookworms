@@ -10,7 +10,7 @@ describe("BookClubController", function(){
     name: "name",
     genre: "genre",
     location: "location",
-    date: "date",
+    day: "day",
     time: "time",
     description: "description",
     book: "book"

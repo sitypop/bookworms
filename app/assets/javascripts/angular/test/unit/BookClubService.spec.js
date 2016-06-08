@@ -10,7 +10,7 @@ describe("BookClubService", function(){
     name: "name",
     genre: "genre",
     location: "location",
-    date: "date",
+    day: "day",
     time: "time",
     description: "description",
     book: "book"
@@ -24,7 +24,7 @@ describe("BookClubService", function(){
   }));
 
   it("receives book club data from the API", function(){
-    var bookClub = new BookClubFactory("name", "genre", "location", "date", "time", "description", "book");
+    var bookClub = new BookClubFactory("name", "genre", "location", "day", "time", "description", "book");
 
     httpBackend.expectGET(apiUrl).respond(apiResponse);
 
