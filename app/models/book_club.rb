@@ -1,2 +1,2 @@
-class BookClub < ActiveRecord::API
+class BookClub < ActiveRecord::Base
 end
