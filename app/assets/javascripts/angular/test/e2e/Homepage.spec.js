@@ -1,6 +1,6 @@
 describe("homepage", function(){
 
-  var mock = require('protactor-http-mock');
+  var mock = require('protractor-http-mock');
 
   var apiUrl = "http://book-worm-api.herokuapp.com/book-clubs";
 
