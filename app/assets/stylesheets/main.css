@@ -1,0 +1,10 @@
+/*body {
+  font-family: Stationery;
+}*/
+body {
+  background: url('background-book.jpg') no-repeat;
+}
+
+#book-club-cards{
+  background: rgba(207, 216, 220, 0.5)
+}
