@@ -1,6 +1,6 @@
-var bookWormApp = angular.module("bookWormApp", ['ui.router', 'templates']);
+var bookWormApp = angular.module("bookWormApp", ['Devise','ui.router', 'templates']);
 
-bookWormApp.config(function($stateProvider, $urlRouterProvider) {
+bookWormApp.config(function(AuthProvider,$stateProvider, $urlRouterProvider) {
   $stateProvider
 
   .state('index', {
@@ -24,12 +24,22 @@ bookWormApp.config(function($stateProvider, $urlRouterProvider) {
   .state('sign-up', {
     url: '/users/sign-up',
     templateUrl: '/assets/templates/users/_sign-up.html',
-    controller : 'BookClubController'
+    controller : 'AuthCtrl',
+    onEnter: ['$state', 'Auth', function($state, Auth) {
+        Auth.currentUser().then(function (){
+          $state.go('index');
+        });
+      }]
   })
 
   .state('sign-in', {
     url: '/users/sign-in',
     templateUrl: '/assets/templates/users/_sign-in.html',
-    controller : 'BookClubController'
+    controller : 'AuthCtrl',
+    onEnter: ['$state', 'Auth', function($state, Auth) {
+        Auth.currentUser().then(function (){
+          $state.go('index');
+        });
+      }]
   });
 });

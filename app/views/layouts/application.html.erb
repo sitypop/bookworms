@@ -12,22 +12,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body ng-app="bookWormApp">
-  <nav>
-    <div class="nav-wrapper teal lighten-3">
-      <a href="#" class="brand-logo center">Bookworms</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Add a Book Club</a></li>
-        <li><a href="#">My Book Clubs</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li><a href="#">Add a Book Club</a></li>
-        <li><a href="#">My Book Clubs</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-    </div>
-  </nav>
+  
+  <div ng-include="'assets/templates/_nav.html'"></div>
   <section ui-view ></section>
 </body>
 </html>

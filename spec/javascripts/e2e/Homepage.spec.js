@@ -33,36 +33,36 @@ describe("homepage", function(){
   });
 
   it("should get home page title", function(){
-    browser.get('/');
+    browser.get('/#/');
     expect(browser.getTitle()).toEqual("Bookworm | Your first stop for book clubs");
   });
 
   it("should display a list of bookclub names", function(){
-    browser.get('/');
+    browser.get('/#/');
     var bookClubName = $$(".book-club-name").first();
     expect(bookClubName.getText()).toEqual("name");
   });
 
   it("should display a list of bookclub genres", function(){
-    browser.get('/');
+    browser.get('/#/');
     var bookClubGenre = $$(".book-club-genre").first();
     expect(bookClubGenre.getText()).toEqual("genre");
   });
 
   it("should display a list of bookclub locations", function(){
-    browser.get('/');
+    browser.get('/#/');
     var bookClubGenre = $$(".book-club-location").first();
     expect(bookClubGenre.getText()).toEqual("location");
   });
 
   it("should display a list of bookclub days", function(){
-    browser.get('/');
+    browser.get('/#/');
     var bookClubGenre = $$(".book-club-day").first();
     expect(bookClubGenre.getText()).toEqual("day");
   });
 
   it("should display a list of bookclub times", function(){
-    browser.get('/');
+    browser.get('/#/');
     var bookClubGenre = $$(".book-club-time").first();
     expect(bookClubGenre.getText()).toEqual("time");
   });
