@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.0'
 
+gem 'angular-ui-router-rails'
 gem 'devise'
 gem 'rails-api'
 gem 'angularjs-rails'
@@ -54,4 +55,8 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+source "http://rails-assets.org" do
+  gem 'rails-assets-angular-devise'
 end

@@ -1,0 +1,22 @@
+<div ng-controller="BookClubController as ctrl" ng-init="ctrl.getBookClubs()" class="book-clubs container">
+  <div class="row">
+    <div class="col s12">
+      <div class="card-panel hoverable black-text" id="book-club-cards">
+        <h6>Day:</h6> <input ng-model='search.day'> 
+        <h6>Location:</h6> <input ng-model='search.location'> 
+        <h6>Time:</h6> <input ng-model='search.time'> 
+      </div>
+      <ul>
+        <li ng-repeat="bookclubs in ctrl.bookClubs | filter:search:strict" class="card-panel hoverable" id="book-club-cards">
+          <h3 class="book-club-name left"> {{ bookclubs.name }} </h3>
+          <ul class="right-align">
+            <li class="book-club-genre"> {{bookclubs.genre }} </li>
+            <li class="book-club-location"> {{bookclubs.location }} </li>
+            <li class="book-club-day"> {{bookclubs.day }} </li>
+            <li class="book-club-time"> {{bookclubs.time | date:'@ h:mma'}} </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

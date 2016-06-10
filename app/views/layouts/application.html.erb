@@ -8,42 +8,12 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body ng-app="bookWormApp">
-  <nav>
-    <div class="nav-wrapper teal lighten-3">
-      <a href="#" class="brand-logo center">Bookworms</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Add a Book Club</a></li>
-        <li><a href="#">My Book Clubs</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li><a href="#">Add a Book Club</a></li>
-        <li><a href="#">My Book Clubs</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <div ng-controller="BookClubController as ctrl" ng-init="ctrl.getBookClubs()" class="book-clubs container">
-    <div class="row">
-      <div class="col s12">
-        <ul>
-          <li ng-repeat="bookclubs in ctrl.bookClubs" class="card-panel hoverable" id="book-club-cards">
-            <h3 class="book-club-name left"> {{ bookclubs.name }} </h3>
-            <ul class="right-align">
-              <li class="book-club-genre"> {{bookclubs.genre }} </li>
-              <li class="book-club-location"> {{bookclubs.location }} </li>
-              <li class="book-club-day"> {{bookclubs.day }} </li>
-              <li class="book-club-time"> {{bookclubs.time}} </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <div ng-include="'assets/templates/_nav.html'"></div>
+  <section ui-view ></section>
 </body>
 </html>
