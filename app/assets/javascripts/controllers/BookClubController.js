@@ -1,4 +1,4 @@
-bookWormApp.controller("BookClubController", ["BookClubService", function(BookClubService){
+bookWormApp.controller("BookClubController", ["$state", "BookClubService", function($state, BookClubService){
   var self = this;
 
   self.getBookClubs = function(){
@@ -8,7 +8,8 @@ bookWormApp.controller("BookClubController", ["BookClubService", function(BookCl
   };
 
   self.addBookClub = function(bookClub){
-    BookClubService.addBookClub(bookClub);
+    BookClubService.addBookClub(bookClub).then(function() {
+      $state.go('index');
+    });
   };
-
 }]);

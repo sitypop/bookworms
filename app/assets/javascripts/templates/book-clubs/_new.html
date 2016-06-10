@@ -1,13 +1,13 @@
 <div ng-controller="BookClubController as ctrl">
   <form novalidate class="simple-form">
-      Name: <input type="text" ng-model="bookclub.name" /><br />
-      Genre: <input type="text" ng-model="bookclub.genre" /><br />
-      Location: <input type="text" ng-model="bookclub.location" /><br />
-      Description: <input type="text" ng-model="bookclub.description" /><br />
-      Day: <input type="text" ng-model="bookclub.day" /><br />
-      Time: <input type="time" ng-model="bookclub.time" /><br />
-      Book: <input type="text" ng-model="bookclub.book" /><br />
+      Name: <input id="name" type="text" ng-model="bookclub.name" /><br />
+      Genre: <input id="genre" type="text" ng-model="bookclub.genre" /><br />
+      Location: <input id="location" type="text" ng-model="bookclub.location" /><br />
+      Description: <input id="description" type="text" ng-model="bookclub.description" /><br />
+      Day: <input id="day" type="text" ng-model="bookclub.day" /><br />
+      Time: <input id="time" type="time" ng-model="bookclub.time" /><br />
+      Book: <input id="book" type="text" ng-model="bookclub.book" /><br />
 
-      <input type="submit" ng-click="ctrl.addBookClub(bookclub)" value="Create Book Club" />
+      <input id="submit" type="button" ng-click="ctrl.addBookClub(bookclub)" value="Create Book Club" />
     </form>
 </div>
