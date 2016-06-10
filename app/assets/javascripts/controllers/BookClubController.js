@@ -7,4 +7,8 @@ bookWormApp.controller("BookClubController", ["BookClubService", function(BookCl
     });
   };
 
+  self.addBookClub = function(bookClub){
+    BookClubService.addBookClub(bookClub);
+  };
+
 }]);

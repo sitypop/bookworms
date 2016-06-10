@@ -36,5 +36,14 @@ describe("BookClubService", function(){
     httpBackend.flush();
   });
 
+  // it("inputs book club data to the API", function(){
+  //   visit('/book-club/new');
+  //   fill_in("name").with("Traveller's Anonymous");
+  //   fill_in("genre").with("Travelling");
+  //   fill_in("location").with("Costa Rica");
+  //  
+  // httpBackend.expectPOSt?
+  });
+
 
 });
