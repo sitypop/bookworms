@@ -74,9 +74,10 @@ describe("homepage", function(){
     $('#location').sendKeys('location');
     $('#description').sendKeys('description');
     $('#day').sendKeys('day');
-    $('#time').sendKeys('time');
+    $('#time').sendKeys('21:21');
     $('#book').sendKeys('book');
-    element(by.css('[ng-click="ctrl.addBookClub(bookclub)"]')).click();
+    $('#submit').click();
+    browser.get('/#/');
     var bookClubName = $$(".book-club-name").last();
     expect(bookClubName.getText()).toEqual("name");
   });

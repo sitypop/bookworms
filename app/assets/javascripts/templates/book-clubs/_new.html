@@ -1,13 +1,17 @@
 <div ng-controller="BookClubController as ctrl">
+  <div class="row">
+  <div class="card-panel hoverable col s10 offset-s1" id="book-club-cards">
   <form novalidate class="simple-form">
-      Name: <input id="name" type="text" ng-model="bookclub.name" /><br />
-      Genre: <input id="genre" type="text" ng-model="bookclub.genre" /><br />
-      Location: <input id="location" type="text" ng-model="bookclub.location" /><br />
-      Description: <input id="description" type="text" ng-model="bookclub.description" /><br />
-      Day: <input id="day" type="text" ng-model="bookclub.day" /><br />
-      Time: <input id="time" type="time" ng-model="bookclub.time" /><br />
-      Book: <input id="book" type="text" ng-model="bookclub.book" /><br />
+      <h6>Name: </h6><input id="name" type="text" ng-model="bookclub.name" />
+      <h6>Genre: </h6><input id="genre" type="text" ng-model="bookclub.genre" />
+      <h6>Location: </h6><input id="location" type="text" ng-model="bookclub.location" />
+      <h6>Description: </h6><input id="description" type="text" ng-model="bookclub.description" />
+      <h6>Day: </h6><input id="day" type="text" ng-model="bookclub.day" />
+      <h6>Time: </h6><input id="time" type="time" ng-model="bookclub.time" />
+      <h6>Book: </h6><input id="book" type="text" ng-model="bookclub.book" />
 
       <input id="submit" type="button" ng-click="ctrl.addBookClub(bookclub)" value="Create Book Club" />
     </form>
+  </div>
+</div>
 </div>
