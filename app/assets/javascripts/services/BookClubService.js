@@ -18,5 +18,9 @@ bookWormApp.service("BookClubService", [ "$http", "BookClubFactory", function($h
     });
   }
 
+  self.addBookClub = function(bookclub){
+    $http.post("/book_clubs", {params: { name: bookclub.name, genre: bookclub.genre, location: bookclub.location, description: bookclub.description, day: bookclub.day, time: bookclub.time, book: bookclub.book } });
+  };
+
 
 }]);
