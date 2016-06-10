@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
 devise_for :users, :controllers => {sessions: 'sessions', registrations: 'registrations'}
-get 'book_clubs' => 'book_clubs#index'
+get 'book_clubs' => 'book_clubs#index', :defaults => { :format => :json }
 
-resources :book_clubs
+resources :book_clubs, :defaults => { :format => :json }
 
 root 'angular#angular'
 

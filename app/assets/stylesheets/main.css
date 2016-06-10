@@ -1,10 +1,15 @@
-/*body {
-  font-family: Stationery;
-}*/
 body {
   background: url('background-book.jpg') no-repeat;
+  background-attachment: fixed;
 }
 
 #book-club-cards{
   background: rgba(207, 216, 220, 0.5)
+}
+
+#allan {
+  position: absolute;
+  margin-left: -20px;
+  margin-top:  -5px;
+  width: 120px;
 }
