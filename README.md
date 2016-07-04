@@ -10,8 +10,6 @@ Bookworms aims to solve the problem of connecting book lovers and aspiring reade
 
 ## Instructions
 
-Click [here] (http...) to explore Bookworms online.
-
 To install and use locally:
 
 ```
@@ -20,6 +18,8 @@ $ cd bookworms
 $ bundle install
 $ bower install
 $ npm install
+$ rake db:create
+$ rake db:migrate
 $ rails s
 ```
 
