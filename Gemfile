@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.0'
 
+gem 'sinatra'
 gem 'angular-ui-router-rails'
 gem 'devise'
 gem 'rails-api'
