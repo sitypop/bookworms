@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.3.0'
 
 
-
+gem 'rails_12factor'
 gem 'sinatra'
 gem 'angular-ui-router-rails'
 gem 'devise'
